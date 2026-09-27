@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    min-height: 100vh;
+}
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    padding: 34px 20px 30px;
+}
+
+.header h1 {
+    font-size: 52px;
+    font-weight: normal;
+    margin-bottom: 14px;
+}
+
+.header-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header-symbol span {
+    width: 80px;
+    height: 2px;
+    background: #e87918;
+}
+
+.header-symbol img {
+    width: 38px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* DRINK CARDS */
+
+.drinks-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.drink-card {
+    position: relative;
+    height: 485px;
+    background: #11110f;
+    border: 1px solid #282724;
+    border-radius: 24px;
+    text-align: center;
+    padding: 35px 20px 20px;
+    overflow: hidden;
+}
+
+.drink-card.active {
+    border: 2px solid #a75b20;
+    box-shadow: 0 0 20px rgba(214, 112, 25, 0.12);
+}
+
+.badge {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    color: #e98021;
+    border: 1px solid #a85b1d;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.drink-image {
+    width: 100%;
+    height: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drink-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.drink-card h2 {
+    font-size: 25px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.description {
+    color: #999;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.small-line {
+    width: 55px;
+    height: 1px;
+    background: #e87918;
+    margin: 18px auto 12px;
+}
+
+.price {
+    color: #ed7a18;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* CHEF SPECIAL */
+
+.chef-special {
+    width: 92%;
+    max-width: 1200px;
+    margin: 28px auto;
+    min-height: 350px;
+    background: #10100f;
+    border: 1px solid #292825;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.chef-image {
+    width: 32%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chef-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.chef-content {
+    width: 55%;
+    padding: 40px;
+}
+
+.special-label {
+    color: #e87918;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.chef-content h2 {
+    font-size: 38px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.chef-subtitle {
+    color: #aaa;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.chef-description {
+    color: #999;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.explore-button {
+    background: transparent;
+    color: #e87918;
+    border: 1px solid #e87918;
+    border-radius: 30px;
+    padding: 13px 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.explore-button span {
+    margin-left: 25px;
+    font-size: 20px;
+}
+
+/* FOOTER */
+
+.footer {
+    border-top: 1px solid #713d18;
+    min-height: 80px;
+    padding: 20px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #888;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-links span:nth-child(even) {
+    color: #e87918;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons span {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #80501f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e87918;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+    .drinks-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chef-image {
+        width: 35%;
+    }
+
+    .chef-content {
+        width: 65%;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 38px;
+    }
+
+    .drinks-container {
+        grid-template-columns: 1fr;
+    }
+
+    .drink-card {
+        height: 480px;
+    }
+
+    .chef-special {
+        flex-direction: column;
+    }
+
+    .chef-image {
+        width: 100%;
+        height: 250px;
+    }
+
+    .chef-content {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .chef-content h2 {
+        font-size: 30px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+}
