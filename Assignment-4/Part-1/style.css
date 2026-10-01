@@ -1,0 +1,112 @@
+* {
+    gap: 20px;border-radius: 50px;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+ height:calc(100% - 10px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+ margin-left: 200px;
+    margin-right: 200px;
+    height: 100%;
+    width: 100%;
+    background-color: #060101;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+  grid-template-columns: 4;
+  grid-template-rows: 5;
+  grid-template-areas:
+    "left-top top-left-center top-right-center right-top"
+    "left-top top-left-center top-right-center right-center"
+    "left-bottom left-center top-right-center right-center"
+    "left-bottom bottom-left-center1 bottom-right bottom-right"
+    "left-bottom bottom-left-center2 bottom-right bottom-right";
+}
+.left-top {
+  grid-area: left-top;
+  background-color: #e97878;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 50px;
+}
+.top-left-center {
+  grid-area: top-left-center;
+  background-color: #3a93a3;
+  height: 250px;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 50px;
+}
+.top-right-center {
+  grid-area: top-right-center;
+  background-color: #7ae27a;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 50px;
+}
+.right-top {
+  grid-area: right-top;
+  background-color: #cb39cb;
+  height: 130px;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 50px;
+}
+.left-center {
+  grid-area: left-center;
+  background-color: #7575c9;
+  height: 200px;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 50px;
+}
+.top-right-center {
+  grid-area: top-right-center;
+  background-color: #2b352b;
+  padding: 20px;
+}
+.right-center {
+  grid-area: right-center;
+  background-color: #3b5a67;
+  padding: 20px;
+  margin: 10px;
+  gap: 20px;
+  border-radius: 50px;
+}
+.left-bottom {
+  grid-area: left-bottom;
+  background-color: #3838b2;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 50px;
+}
+.bottom-left-center1 {
+  grid-area: bottom-left-center1;
+  background-color: #5a5887;
+  height: 100px;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 30px;
+}
+.bottom-left-center2 {
+  grid-area: bottom-left-center2;
+  background-color: #0f500f;
+  padding: 20px;
+  height: 100px;
+  gap: 20px;
+  border-radius: 30px;
+}
+.bottom-right {
+  grid-area: bottom-right;
+  background-color: #ff0303;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 40px;
+}
